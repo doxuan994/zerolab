@@ -3,6 +3,11 @@ html, body {
     padding: 0;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    transition: all 0.6s ease;
+}
+a {
+    text-decoration: none;
+    color: #e7e7e7;
 }
 p {
     line-height: 1.5;
@@ -20,6 +25,15 @@ h3 {
 h4 {
     font-size: 2em;
     font-weight: 100;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    font-size: 2em;
+    color: #ccc;
 }
 
 .text-center {
@@ -44,18 +58,46 @@ h4 {
     position: relative;
 }
 
-/* .title {
-    background-color: rgba(255,235,59,0.8);
-    position: absolute;
-    top: 3em;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    padding: 0;
-} */
+.contact {
+    height: 24em;
+
+}
 
 
+.site-footer {
+    height: 25em;
+    background: #2a2a2a;
+}
 
+.footer-social-container {
+    padding: 1em;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.backToTop {
+    padding: 0 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.footer-links-container {
+    padding: 0 1em;
+}
+
+.social, .footer-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.social li {
+    padding: 0 .3em;
+}
 
 @media screen and (max-width: 992px) {
     .middle-header {
