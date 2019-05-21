@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+p {
+    line-height: 1.5;
+}
+
+h3 {
+    margin-top: 11px;
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-bottom: 2px solid #333;
+    padding: .5em 2em;
+    color: #333;
+}
+h4 {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.site-header {
+    background-color: #2a2a2a;
+    height: 3.7em;
+
+}
+
+
+
+.middle-header {
+    background: #000;
+    min-height: 40em;
+}
+
+.middle-content {
+    position: relative;
+}
+
+/* .title {
+    background-color: rgba(255,235,59,0.8);
+    position: absolute;
+    top: 3em;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 0;
+} */
+
+
+
+
+@media screen and (max-width: 992px) {
+    .middle-header {
+        min-height: 25em;
+    }
+
+}

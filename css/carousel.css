@@ -1,0 +1,117 @@
+.slideshow-container {
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: 0.6s ease;
+
+    user-select: none;
+}
+
+.prev {
+    border-radius: 0 1em 1em 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 1em 0 0 1em;
+}
+
+
+
+
+/* The dots/bullets/indicators */
+.carousel-dots {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+
+
+
+.mySlides { display: none; }
+
+.mySlides { position: relative; }
+
+.mySlides {
+    min-height: 52em;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.mySlides-1 { background-image: url("../img/ancient-architectural-design-architecture-2166553.jpg"); }
+.mySlides-2 { background-image: url("../img/backlit-bali-fog-2166643.jpg"); }
+.mySlides-3 { background-image: url("../img/clouds-daylight-environment-2082949.jpg"); }
+
+
+
+.inner {
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+
+    max-width: 26em;
+    padding: 3em;
+
+
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    left: 15%;
+}
+
+
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+    .mySlides {
+        min-height: 31em;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .mySlides {
+        min-height: 51em;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .mySlides {
+        min-height: 31em;
+    }
+    .inner {
+        left: 0;
+
+        max-width: 100%;
+    }
+}
