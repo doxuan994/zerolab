@@ -103,5 +103,10 @@ i {
     .middle-header {
         min-height: 25em;
     }
+}
 
+@media screen and (max-width: 480px) {
+    ul {
+        padding: 0;
+    }
 }

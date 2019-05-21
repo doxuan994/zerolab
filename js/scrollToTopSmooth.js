@@ -13,10 +13,9 @@ scrollToTopBtn.addEventListener("click", scrollToTop, false);
 // }
 
 
-function scrollToTop(evt) {
+function scrollToTop() {
     if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
         window.scrollBy(0, -50);
         requestAnimationFrame(scrollToTop);
     }
-    evt.preventDefault();
 }
