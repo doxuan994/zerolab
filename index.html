@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/wickedcss.css">
+    <link rel="stylesheet" href="css/overlay.css">
 </head>
 <body>
 
@@ -127,34 +128,75 @@
             </div>
 
             <div class="footer-links-container">
-                <ul>
-                    <li><a href="http://elvis.rowan.edu/~dox0/webdev/PhotoSite/" target="_blank">PhotoSite</a></li>
-                    <li><a href="http://elvis.rowan.edu/~dox0/xuando_movie_db_api/" target="_blank">Movie API</a></li>
-                    <li><a href="http://elvis.rowan.edu/~dox0/startingpoint.html" target="_blank">PHP Search</a></li>
-                </ul>
-                <ul>
-                    <li><a href="https://doxuan994.github.io/goldchart/index.html" target="_blank">Gold Price</a></li>
-                    <li><a href="https://doxuan994.github.io/template-study/" target="_blank">Code for fun</a></li>
-                    <li><a href="http://elvis.rowan.edu/~dox0/webdev/1-portfolio/portfolio.html" target="_blank">Simple Portfolio</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
+                <div class="footer-links-wrapper">
+                    <ul>
+                        <li><a href="http://elvis.rowan.edu/~dox0/webdev/PhotoSite/" target="_blank">PhotoSite</a></li>
+                        <li><a href="http://elvis.rowan.edu/~dox0/xuando_movie_db_api/" target="_blank">Movie API</a></li>
+                        <li><a href="http://elvis.rowan.edu/~dox0/startingpoint.html" target="_blank">PHP Search</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://doxuan994.github.io/goldchart/index.html" target="_blank">Gold Price</a></li>
+                        <li><a href="https://doxuan994.github.io/template-study/" target="_blank">Code for fun</a></li>
+                        <li><a href="http://elvis.rowan.edu/~dox0/webdev/1-portfolio/portfolio.html" target="_blank">Simple Portfolio</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://doxuan994.github.io/Do-majorassignment2/index.html" target="_blank">My Game Website</a></li>
+                        <li><a href="https://doxuan994.github.io/Do-assignment11/" target="_blank">Product Website</a></li>
+                        <li><a href="https://doxuan994.github.io/Do-assignment10/index.html" target="_blank">Book Website</a></li>
+                    </ul>
+                </div>
+
+                <div class="hiremeBtn">
+                    <a class="hireme" onclick="openNav()">Hire Me</a>
+                </div>
+
             </div>
 
             <div class="copyright">
+
+
+                <div class="flex-item">
+                    <p>Copyright Xuan Do</p>
+                    <p>Power By</p>
+                    <p>HTML | CSS/CSS3 | JS | Wickedcss &amp; Font Awesome</p>
+                    <p>Built by <i class="fas fa-heartbeat heartbeat" style="font-size: 1em;"></i></p>
+                </div>
+
+
 
             </div>
 
         </footer>
 
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+
+        </div>
+
+
     </div>
+
+
+
 
 
     <script src="js/carousel.js"></script>
     <script src="js/scrollToTopSmooth.js"></script>
+    <script src="js/overlay.js"></script>
+
+
 
 
 

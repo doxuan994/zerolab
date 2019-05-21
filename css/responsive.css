@@ -64,9 +64,20 @@ i {
 }
 
 
+
 .site-footer {
-    height: 25em;
     background: #2a2a2a;
+    padding-bottom: 2em;
+}
+
+
+.copyright {
+    padding-left: 56px;
+}
+.copyright p {
+    color: #ccc;
+    font-size: 0.8em;
+    font-weight: 600;
 }
 
 .footer-social-container {
@@ -76,6 +87,8 @@ i {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+
+
 }
 
 .backToTop {
@@ -87,9 +100,37 @@ i {
 
 .footer-links-container {
     padding: 0 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+
 }
 
-.social, .footer-links-container {
+.hiremeBtn {
+    padding: 0 0 0 40px;
+    display: flex;
+    cursor: pointer;
+}
+
+.hireme {
+    background-color: goldenrod;
+    color: white;
+    font-weight: 800;
+    padding: 0.5em 1em;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.social {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -97,6 +138,12 @@ i {
 
 .social li {
     padding: 0 .3em;
+}
+
+.copyright {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 992px) {
@@ -107,6 +154,10 @@ i {
 
 @media screen and (max-width: 480px) {
     ul {
+        padding: 0;
+    }
+
+    .hiremeBtn {
         padding: 0;
     }
 
