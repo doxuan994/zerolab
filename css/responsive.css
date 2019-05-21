@@ -109,4 +109,9 @@ i {
     ul {
         padding: 0;
     }
+
+    .footer-links-container ul {
+        padding-right: 1em;
+    }
+
 }
