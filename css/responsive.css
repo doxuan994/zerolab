@@ -1,6 +1,6 @@
 /**
- * Correct Safari/iPhone ignores some font-size settings.
- */
+* Correct Safari/iPhone ignores some font-size settings.
+*/
 
 body {
     -webkit-text-size-adjust: none;
@@ -115,7 +115,7 @@ i {
 
 
 /*
-navigation
+Navigation
 ----------------------------------------------------------------------------  */
 
 .sitenav-wrap {
@@ -143,7 +143,7 @@ navigation
     margin: 0;
     padding: 0;
 
-    z-index: 1;
+    z-index: 999;
 }
 
 
@@ -165,7 +165,7 @@ navigation
 
 
 /*
-                                SUB LIST
+SUB LIST
 ----------------------------------------------------------------------------- */
 
 
@@ -201,7 +201,7 @@ navigation
 
 
 /*
-                               SUB SUB LIST
+SUB SUB LIST
 ----------------------------------------------------------------------------- */
 .sub-sub-siteNav {
     background-color: #2a2a2a;;
@@ -224,6 +224,120 @@ navigation
 
 /* Visible SubSublist */
 .sub-siteNav li:hover .sub-sub-siteNav { opacity: 1; visibility: visible; }
+
+
+
+
+
+
+
+/*
+Navigation smaller screen
+----------------------------------------------------------------------------  */
+
+
+@media screen and (max-width: 992px) {
+
+
+
+    .nav-line {
+        position: relative;
+
+        height: 100%;
+
+
+        /* background-color: white; */
+
+        padding: 0 30px;
+    }
+
+
+
+
+
+    .nav-line .lines {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: -1px;
+        width: 30px;
+        height: 3px;
+        border-radius: 2.14286px;
+        transition: all .2s ease-in-out;
+        background-color: #e7e7e7;
+
+        transform-origin:  center center;
+    }
+
+    .nav-line .lines:before, .nav-line .lines:after  {
+        width: 30px;
+        height: 3px;
+        border-radius: 2.14286px;
+        position: absolute;
+
+        left: 0;
+        content: "";
+
+        transition: all .2s ease-in-out;
+        background-color: #e7e7e7;
+    }
+
+    .nav-line .lines:before {
+
+    }
+
+    .nav-line .lines:after {
+
+    }
+
+    .nav-line .lines:before { top: 8px;  }
+
+
+    .nav-line .lines:after  { top: -8px;   }
+
+
+    .nav-line .lines:before {  }
+    .nav-line .lines:after {  }
+
+
+
+    .linesMobile::before {
+        transform: translateY(-8px) rotate(135deg);
+    }
+    .linesMobile::after {
+        transform: translateY(8px) rotate(-135deg);
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -354,7 +468,7 @@ navigation
 }
 
 .hireme {
-    background-color: goldenrod;
+    background-color: #FEDC2A;
     color: white;
     font-weight: 800;
     padding: 0.5em 1em;
@@ -384,6 +498,36 @@ navigation
     .middle-header {
         min-height: 25em;
     }
+
+    .topHireMe {
+        display: none;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 @media screen and (max-width: 480px) {
