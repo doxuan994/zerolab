@@ -604,11 +604,9 @@ Navigation smaller screen
 
 @media screen and (max-width: 480px) {
 
-    .fullscreen-video-wrap {
-        display: none;
-    }
+    .imgLogo { font-size: 2em; }
 
-
+    #propLogo { font-size: 1em; }
 
     ul {
         padding: 0;
