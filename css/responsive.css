@@ -58,6 +58,9 @@ i {
     color: #ccc;
 }
 
+
+
+
 .text-center {
     text-align: center;
 }
@@ -152,13 +155,12 @@ Navigation
     font-weight: 800;
     text-transform: uppercase;
     padding: 0 1em;
-    position: relative;
+    cursor: pointer;
+    color: #e7e7e7;
 }
 .siteNav li:hover > a {
-    color: goldenrod;
-
+    color: white;
     transition: all 0.6s ease-in-out;
-
     cursor: pointer;
 }
 
@@ -180,7 +182,7 @@ SUB LIST
     position: absolute;
     left: 0;
 
-    width: 10em;
+    width: 14em;
 
     visibility: hidden;
 }
@@ -188,22 +190,16 @@ SUB LIST
 .sub-siteNav li {
     font-weight: 600;
     font-size: 1em;
-
-    position: relative;
 }
 
 
-/* Visible Sublist */
-.siteNav li:hover .sub-siteNav {
-    opacity: 1;
-    visibility: visible;
-}
+
 
 
 /*
 SUB SUB LIST
 ----------------------------------------------------------------------------- */
-.sub-sub-siteNav {
+/* .sub-sub-siteNav {
     background-color: #2a2a2a;;
     position: absolute;
     padding: 0;
@@ -220,12 +216,54 @@ SUB SUB LIST
 
 .sub-sub-siteNav li {
     width: 180px;
+} */
+
+
+
+
+
+@media screen and (min-width: 993px) {
+    .siteNav li {
+        position: relative;
+    }
+
+    .sub-siteNav li {
+        position: relative;
+    }
+
+    /* Visible Sublist */
+    .siteNav li:hover .sub-siteNav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+    /* Visible SubSublist */
+    .sub-siteNav li:hover .sub-sub-siteNav { opacity: 1; visibility: visible; }
+
+
+    .mobile-heading {
+        display: none;
+    }
 }
 
-/* Visible SubSublist */
-.sub-siteNav li:hover .sub-sub-siteNav { opacity: 1; visibility: visible; }
 
 
+
+
+.show-site-nav-kids {
+
+    opacity: 1!important;
+    visibility: visible!important;
+
+}
+
+
+
+.hide-site-nav {
+    visibility: hidden!important;
+}
 
 
 
@@ -238,22 +276,19 @@ Navigation smaller screen
 
 @media screen and (max-width: 992px) {
 
+    /* Hamburger button */
 
+
+
+
+
+    /* Multi-Level Push Menu */
 
     .nav-line {
         position: relative;
-
         height: 100%;
-
-
-        /* background-color: white; */
-
         padding: 0 30px;
     }
-
-
-
-
 
     .nav-line .lines {
         position: absolute;
@@ -266,8 +301,6 @@ Navigation smaller screen
         border-radius: 2.14286px;
         transition: all .2s ease-in-out;
         background-color: #e7e7e7;
-
-        transform-origin:  center center;
     }
 
     .nav-line .lines:before, .nav-line .lines:after  {
@@ -283,33 +316,85 @@ Navigation smaller screen
         background-color: #e7e7e7;
     }
 
-    .nav-line .lines:before {
-
-    }
-
-    .nav-line .lines:after {
-
-    }
-
     .nav-line .lines:before { top: 8px;  }
+    .nav-line .lines:after  { top: -8px; }
 
-
-    .nav-line .lines:after  { top: -8px;   }
-
-
-    .nav-line .lines:before {  }
-    .nav-line .lines:after {  }
+    .linesMobile::before { transform: translateY(-8px) rotate(135deg); }
+    .linesMobile::after  { transform: translateY(8px) rotate(-135deg); }
 
 
 
-    .linesMobile::before {
-        transform: translateY(-8px) rotate(135deg);
+    /*
+    Navigation
+    --------------------------------------------------------------------------*/
+
+    .siteNav {
+        height: 100vh;
+        display: none;
+        background-color: #2a2a2a;
+
+        position: absolute;
+        top: 3.7em;
+        right: 0;
     }
-    .linesMobile::after {
-        transform: translateY(8px) rotate(-135deg);
+
+    .displayBlock { display: block; }
+
+
+    .siteNav li {
+        border-bottom: 1px solid;
+        border-color: #333!important;
+
+        padding: 0 10em;
+        color: #ccc;
+    }
+
+    .siteNav li a {
+        color: #ccc;
     }
 
 
+    .siteNav {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+
+    /*
+    SUB LIST
+    ----------------------------------------------------------------------------- */
+    .sub-siteNav {
+        width: auto;
+        visibility: hidden;
+        opacity: 0;
+
+
+
+        top: 0;
+
+        padding: 0;
+
+
+        border-bottom: 1px solid;
+        border-color: #333!important;
+        height: 100vh;
+
+        display: block;
+    }
+
+    .sub-siteNav li {
+        padding: 0.5em 10em;
+        color: #ccc;
+    }
+
+    .sub-siteNav li a {
+        color: #ccc;
+    }
+
+    .mobile-heading {
+        background-color: #1d1d1d;
+    }
 
 }
 
@@ -350,6 +435,11 @@ Navigation smaller screen
     min-height: 40em;
 
     position: relative;
+
+    background-image: url('../img/agriculture-countryside-cropland-2131899.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .mTitle {
@@ -366,30 +456,25 @@ Navigation smaller screen
     top: 9em;
 }
 
-.fullscreen-video-wrap {
-    display: block;
 
 
-    width: 100%;
-    height: 100%;
 
-
+#playBtn, #pauseBtn {
+    color: white;
+    font-size: 5em;
+    z-index: 999;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-
-    overflow: hidden;
-
-    z-index: 0;
-}
-
-
-.background-video {
+    bottom: 5%;
 
 }
-
-
+#playBtn {
+    left: 45%;
+    transform: translateX(-45%);
+}
+#pauseBtn {
+    left: 55%;
+    transform: translateX(-55%);
+}
 
 
 
