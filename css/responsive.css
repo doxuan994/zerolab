@@ -589,30 +589,17 @@ Navigation smaller screen
     }
 
 
+    .mTitle { top: 6em; }
 
+    h1 { font-size: 2.5em; }
 
+    h2 { font-size: 1.5em; }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 768px) {
+    .mTitle { top: 7em; }
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1em; }
 }
 
 @media screen and (max-width: 480px) {
