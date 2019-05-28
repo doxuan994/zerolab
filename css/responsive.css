@@ -276,18 +276,7 @@ width: 180px;
 
 
 
-.show-site-nav-kids {
 
-    opacity: 1!important;
-    visibility: visible!important;
-
-}
-
-
-
-.hide-site-nav {
-    visibility: hidden!important;
-}
 
 
 
@@ -327,7 +316,7 @@ Navigation smaller screen
         background-color: #e7e7e7;
     }
 
-    .nav-line .lines:before, .nav-line .lines:after  {
+    .nav-line .lines:before, .nav-line .lines:after {
         width: 30px;
         height: 3px;
         border-radius: 2.14286px;
@@ -351,6 +340,7 @@ Navigation smaller screen
     /*
     Navigation
     --------------------------------------------------------------------------*/
+
 
     .siteNav {
         height: 100vh;
@@ -385,6 +375,45 @@ Navigation smaller screen
     }
 
 
+
+
+    .sitenav-link-1 > a span:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 2em;
+        top: 26px;
+
+
+        width: 0.4em;
+        height: 0.4em;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(135deg);
+    }
+
+
+
+
+    .sitenav-link-4 > a span:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 2em;
+        top: 206px;
+
+
+        width: 0.4em;
+        height: 0.4em;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(135deg);
+    }
+
+
+
+
+
     .siteNav {
         opacity: 1;
         visibility: visible;
@@ -410,7 +439,9 @@ Navigation smaller screen
         border-color: #333!important;
         height: 100vh;
 
-        display: block;
+        display: none;
+
+        z-index: 1;
     }
 
     .sub-siteNav li {
@@ -422,12 +453,46 @@ Navigation smaller screen
 
     .sub-siteNav li a {
         color: #ccc;
+
+
     }
 
     .mobile-heading {
         background-color: #1d1d1d;
         padding-left: 7em!important;
         padding-right: 7em!important;
+
+    }
+
+    .sub-siteNav li.mobile-heading span:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 2em;
+        top: 26px;
+
+
+        width: 0.4em;
+        height: 0.4em;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        transform: rotate(-45deg);
+
+    }
+
+    .visibilityHidden { visibility: hidden;; }
+
+
+    .hide-site-nav {
+        visibility: hidden!important;
+    }
+
+
+    .show-site-nav-kids {
+
+        opacity: 1!important;
+        visibility: visible!important;
+        display: block;
 
     }
 

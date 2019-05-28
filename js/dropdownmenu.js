@@ -15,48 +15,33 @@ function navLineTransform() {
 
     let siteNav = document.getElementById('siteNav');
     siteNav.classList.toggle('displayBlock');
-
-
-    
 }
 
 
-// Reset drop down menu when users open sub menu at the mobile but not close
-// and they resize to bigger screen.
-// a window.resize call back funtion.
-function resetDropdownMenu() {
-    let windowInnerWidth = window.innerWidth;
-    if (windowInnerWidth > 992) {
-
-        let siteNavLi = document.querySelectorAll('.siteNav > li');
-        for (let i = 0; i < siteNavLi.length; i++) {
-            if (siteNavLi[i].classList.contains('hide-site-nav')) {
-                siteNavLi[i].classList.remove('hide-site-nav')
-            }
-        }
-
-
-        let subSiteNav = document.querySelectorAll('.sub-siteNav');
-        for (let i = 0; i < subSiteNav.length; i++) {
-            if (subSiteNav[i].classList.contains('show-site-nav-kids')) {
-                subSiteNav[i].classList.remove('show-site-nav-kids');
-            }
-        }
-    }
-}
-
-
-
-// Debouncing.
-// Function will only be called once the resizing is “complete.”
-let timeOut = false;
-window.addEventListener('resize', function() {
-    // Clear the time out.
-    clearTimeout(timeOut);
-
-    // Start timing for event "completion".
-    timeOut = setTimeout(resetDropdownMenu, 250);
-});
+// // Reset drop down menu when users open sub menu at the mobile but not close
+// // and they resize to bigger screen.
+// // a window.resize call back funtion.
+// function resetDropdownMenu() {
+//     let windowInnerWidth = window.innerWidth;
+//     if (windowInnerWidth > 992) {
+//
+//
+//
+//     }
+// }
+//
+//
+//
+// // Debouncing.
+// // Function will only be called once the resizing is “complete.”
+// let timeOut = false;
+// window.addEventListener('resize', function() {
+//     // Clear the time out.
+//     clearTimeout(timeOut);
+//
+//     // Start timing for event "completion".
+//     timeOut = setTimeout(resetDropdownMenu, 250);
+// });
 
 
 
@@ -81,27 +66,59 @@ for (let i = 0; i < siteNavLi.length; i++) {
     siteNavLi[i].addEventListener('click', showSubList);
 }
 
-function showSubList(evt) {
-    let siteNav = evt.srcElement;
-    let siteNavChildNodes = siteNav.childNodes;
 
-    let subSiteNav;
+
+function showSubList(evt) {
+    let siteNav = document.getElementById('siteNav');
+    let targetSiteNavLi = evt.srcElement;
+
+    // let allSideNavLi = document.querySelectorAll('.siteNav > li');
+    // allSideNavLi.forEach(function(element) {
+    //     if (element != targetSiteNavLi) {
+    //         element.classList.add('visibilityHidden');
+    //     }
+    // });
+
+
+    // let sitenavLink1 = document.getElementById('sitenav-link-1');
+    // let sitenavLink4 = document.getElementById('sitenav-link-4');
+    // if (targetSiteNavLi.classList.contains('sitenav-link-1')) {
+    //     sitenavLink4.classList.add('visibilityHidden');
+    // } else if (targetSiteNavLi.classList.contains('sitenav-link-4')) {
+    //     sitenavLink1.classList.add('visibilityHidden');
+    // }
+
+
+
+
+    let targetSiteNavLiChildNodes = targetSiteNavLi.childNodes;
+
+
+    let targetSubSiteNav;
 
 
     // has subSiteNav
-    if (siteNavChildNodes.length > 1) {
-        for (let i = 0; i < siteNavChildNodes.length; i++) {
-            if (typeof siteNavChildNodes[i].classList !== 'undefined') {
-                if (siteNavChildNodes[i].classList.contains('sub-siteNav')) {
-                    subSiteNav = siteNavChildNodes[i];
+    if (targetSiteNavLiChildNodes.length > 1) {
+        for (let i = 0; i < targetSiteNavLiChildNodes.length; i++) {
+            if (typeof targetSiteNavLiChildNodes[i].classList !== 'undefined') {
+                if (targetSiteNavLiChildNodes[i].classList.contains('sub-siteNav')) {
+                    targetSubSiteNav = targetSiteNavLiChildNodes[i];
                 }
             }
         }
     }
 
-    if (typeof siteNav !== 'undefined' && typeof subSiteNav !== 'undefined') {
+
+
+
+
+
+
+    if (typeof siteNav !== 'undefined' && typeof targetSubSiteNav !== 'undefined') {
         siteNav.classList.add('hide-site-nav');
-        subSiteNav.classList.add('show-site-nav-kids');
+
+
+        targetSubSiteNav.classList.add('show-site-nav-kids');
     }
 }
 
@@ -117,8 +134,27 @@ for (let i = 0; i < mobileHeading.length; i++) {
 }
 
 function hideSubList(evt) {
+
+    let siteNav = document.getElementById('siteNav');
+
+
     let subSiteNav = evt.srcElement.parentElement;
-    let siteNav = subSiteNav.parentElement;
+    let targetSiteNavLi = subSiteNav.parentElement;
+
+
+    // let allSideNavLi = document.querySelectorAll('.siteNav > li');
+    // allSideNavLi.forEach(function(element) {
+    //     if (element.classList.contains('visibilityHidden')) {
+    //         element.classList.remove('visibilityHidden');
+    //     }
+    // });
+
+
+    // let sitenavLink1 = document.getElementById('sitenav-link-1');
+    // let sitenavLink4 = document.getElementById('sitenav-link-4');
+    // sitenavLink1.classList.remove('visibilityHidden');
+    // sitenavLink4.classList.remove('visibilityHidden');
+
 
 
     siteNav.classList.remove('hide-site-nav');
