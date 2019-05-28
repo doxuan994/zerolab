@@ -59,6 +59,71 @@ i {
 }
 
 
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+
+}
+
+.column {
+    flex-basis: 50%;
+}
+
+.imgBox {
+    width: 100%;
+}
+
+.galary-container {
+    justify-content: center;
+}
+
+
+/*
+.backgroundImgBox {
+    width: 30%;
+    margin: 1em;
+}
+
+.backgroundImgBox1 {
+    background-image: url("../img/action-aerial-boat-2192682.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.backgroundImgBox2 {
+    background-image: url("../img/bare-tree-birds-dawn-2138922.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.backgroundImgBox3 {
+    background-image: url("../img/bay-beach-boat-2223046.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.backgroundImgBox4 {
+    background-image: url("../img/beach-boat-colorful-33545.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.backgroundImgBox5 {
+    background-image: url("../img/chaly-honda-motorcycle-2044877.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.backgroundImgBox6 {
+    background-image: url("../img/beautiful-clouds-daylight-2092828.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+} */
 
 
 .text-center {
@@ -481,19 +546,21 @@ Navigation smaller screen
 
 
 
+.galary-container {
+    min-height: 40em;
+}
 
 
 
 
 
-
-.middle-content {
+.middle-slideshow {
     position: relative;
 }
 
-.contact {
+.middle-contact {
     height: 24em;
-
+    background-color: #222;
 }
 
 
@@ -581,6 +648,10 @@ Navigation smaller screen
 
 @media screen and (max-width: 992px) {
     .middle-header {
+        min-height: 25em;
+    }
+
+    .galary-container {
         min-height: 25em;
     }
 
