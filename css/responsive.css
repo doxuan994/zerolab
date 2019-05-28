@@ -429,13 +429,8 @@ Navigation smaller screen
         visibility: hidden;
         opacity: 0;
 
-
-
         top: 0;
-
         padding: 0;
-
-
         border-color: #333!important;
         height: 100vh;
 
@@ -453,8 +448,6 @@ Navigation smaller screen
 
     .sub-siteNav li a {
         color: #ccc;
-
-
     }
 
     .mobile-heading {
@@ -463,6 +456,7 @@ Navigation smaller screen
         padding-right: 7em!important;
 
     }
+
 
     .sub-siteNav li.mobile-heading span:before {
         content: "";
@@ -477,10 +471,7 @@ Navigation smaller screen
         border-top: 2px solid;
         border-left: 2px solid;
         transform: rotate(-45deg);
-
     }
-
-    .visibilityHidden { visibility: hidden;; }
 
 
     .hide-site-nav {
@@ -495,7 +486,6 @@ Navigation smaller screen
         display: block;
 
     }
-
 }
 
 
