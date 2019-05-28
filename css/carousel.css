@@ -110,9 +110,22 @@
     .mySlides {
         min-height: 31em;
     }
+
     .inner {
+
+        top: 100%;
+        transform: translateY(-100%);
+
+
+
         left: 0;
 
         max-width: 100%;
+        padding: 1em;
+    }
+
+    .inner h4 {
+        margin: 0;
+        padding: 0;
     }
 }
