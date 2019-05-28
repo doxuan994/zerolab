@@ -396,7 +396,7 @@ Navigation smaller screen
     SUB LIST
     ----------------------------------------------------------------------------- */
     .sub-siteNav {
-        width: auto;
+        width: 100%;
         visibility: hidden;
         opacity: 0;
 
