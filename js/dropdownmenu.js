@@ -1,5 +1,6 @@
 // Show/Hide sideNav on click Hamburger button.
 // Hamburger button transform on click.
+
 let navLine = document.getElementById('navLine');
 navLine.addEventListener('click', navLineTransform);
 function navLineTransform() {
@@ -13,8 +14,10 @@ function navLineTransform() {
     }
 
     let siteNav = document.getElementById('siteNav');
-    console.log(siteNav);
     siteNav.classList.toggle('displayBlock');
+
+
+    
 }
 
 
@@ -39,7 +42,7 @@ function resetDropdownMenu() {
                 subSiteNav[i].classList.remove('show-site-nav-kids');
             }
         }
-    } 
+    }
 }
 
 
