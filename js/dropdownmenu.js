@@ -45,57 +45,17 @@ function navLineTransform() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Show sub menu.
 let siteNavLi = document.querySelectorAll('.siteNav > li');
 for (let i = 0; i < siteNavLi.length; i++) {
     siteNavLi[i].addEventListener('click', showSubList);
 }
 
-
-
 function showSubList(evt) {
     let siteNav = document.getElementById('siteNav');
     let targetSiteNavLi = evt.srcElement;
-
-    // let allSideNavLi = document.querySelectorAll('.siteNav > li');
-    // allSideNavLi.forEach(function(element) {
-    //     if (element != targetSiteNavLi) {
-    //         element.classList.add('visibilityHidden');
-    //     }
-    // });
-
-
-    // let sitenavLink1 = document.getElementById('sitenav-link-1');
-    // let sitenavLink4 = document.getElementById('sitenav-link-4');
-    // if (targetSiteNavLi.classList.contains('sitenav-link-1')) {
-    //     sitenavLink4.classList.add('visibilityHidden');
-    // } else if (targetSiteNavLi.classList.contains('sitenav-link-4')) {
-    //     sitenavLink1.classList.add('visibilityHidden');
-    // }
-
-
-
-
     let targetSiteNavLiChildNodes = targetSiteNavLi.childNodes;
-
-
     let targetSubSiteNav;
-
 
     // has subSiteNav
     if (targetSiteNavLiChildNodes.length > 1) {
@@ -108,22 +68,11 @@ function showSubList(evt) {
         }
     }
 
-
-
-
-
-
-
     if (typeof siteNav !== 'undefined' && typeof targetSubSiteNav !== 'undefined') {
         siteNav.classList.add('hide-site-nav');
-
-
         targetSubSiteNav.classList.add('show-site-nav-kids');
     }
 }
-
-
-
 
 
 
@@ -134,29 +83,9 @@ for (let i = 0; i < mobileHeading.length; i++) {
 }
 
 function hideSubList(evt) {
-
     let siteNav = document.getElementById('siteNav');
-
-
     let subSiteNav = evt.srcElement.parentElement;
     let targetSiteNavLi = subSiteNav.parentElement;
-
-
-    // let allSideNavLi = document.querySelectorAll('.siteNav > li');
-    // allSideNavLi.forEach(function(element) {
-    //     if (element.classList.contains('visibilityHidden')) {
-    //         element.classList.remove('visibilityHidden');
-    //     }
-    // });
-
-
-    // let sitenavLink1 = document.getElementById('sitenav-link-1');
-    // let sitenavLink4 = document.getElementById('sitenav-link-4');
-    // sitenavLink1.classList.remove('visibilityHidden');
-    // sitenavLink4.classList.remove('visibilityHidden');
-
-
-
     siteNav.classList.remove('hide-site-nav');
     subSiteNav.classList.remove('show-site-nav-kids');
 }

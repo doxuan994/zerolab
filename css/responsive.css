@@ -1,10 +1,5 @@
-/**
-* Correct Safari/iPhone ignores some font-size settings.
-*/
-
-body {
-    -webkit-text-size-adjust: none;
-}
+/* Correct Safari/iPhone ignores some font-size settings. */
+body { -webkit-text-size-adjust: none; }
 
 html, body {
     margin: 0;
@@ -13,13 +8,11 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     transition: all 0.6s ease;
 }
-a {
-    text-decoration: none;
-    color: #e7e7e7;
-}
-p {
-    line-height: 1.5;
-}
+a { text-decoration: none; color: #e7e7e7;  }
+p { line-height: 1.5; }
+ul { list-style: none; }
+
+i { font-size: 2em; color: #ccc; }
 
 h1 {
     color: white;
@@ -27,14 +20,12 @@ h1 {
     font-weight: 500;
     text-align: center;
 }
-
 h2 {
     color: white;
     font-size: 2.25em;
     font-weight: 400;
     text-align: center;
 }
-
 h3 {
     margin-top: 11px;
     margin-bottom: 11px;
@@ -49,30 +40,34 @@ h4 {
     font-weight: 100;
 }
 
-ul {
-    list-style: none;
+
+/*
+Custom classes for styling
+------------------------------------------------------------------------------*/
+.text-center { text-align: center; }
+.vertical-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-i {
-    font-size: 2em;
-    color: #ccc;
-}
 
-
-
+/*
+Flexbox CSS3 Layout & Grid
+------------------------------------------------------------------------------*/
 .flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.flex-item {
+.flex-item {}
+.column-half { flex-basis: 50%; }
 
-}
-
-.column {
-    flex-basis: 50%;
-}
+/*
+Gallery images
+------------------------------------------------------------------------------*/
+.gallery-container { justify-content: center; }
 
 .imgBox {
     width: 100%;
@@ -81,17 +76,15 @@ i {
 }
 .imgBox:hover { opacity: 0.5; }
 
-.galary-container {
-    justify-content: center;
-}
 
 
 
-.text-center {
-    text-align: center;
-}
 
 
+
+/*
+                        HEADER & NAVIGATION
+------------------------------------------------------------------------------*/
 .site-header {
     background-color: #2a2a2a;
     height: 3.7em;
@@ -105,27 +98,23 @@ i {
     justify-content: space-between;
 }
 
+
+/*
+Left side of the header
+------------------------------------------------------------------------------*/
 .leftSideNav {
     height: 3.7em;
 
     display: flex;
     flex-direction: row;
 }
-
-.vertical-centered {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 3.7em;
-}
-
+.leftSideNav-item { height: 3.7em; }
 .imgLogo {
     font-size: 2.6em;
     padding-left: 0.5em;
     color: white;
 }
-
-#propLogo {
+.propLogo {
     color: rgb(249, 249, 249);
     font-weight: 900;
     font-size: 1.5em;
@@ -134,47 +123,25 @@ i {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*
 Navigation
 ----------------------------------------------------------------------------  */
-
 .sitenav-wrap {
     color: #ccc;
-
     background-color: #2a2a2a;
-
-
     height: 3.7em;
-
     line-height: 3.7em;
-
-
-
-
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-
 }
 
 .siteNav {
     display: flex;
-
     margin: 0;
     padding: 0;
-
     z-index: 999;
 }
-
 
 .siteNav li {
     font-weight: 800;
@@ -194,22 +161,17 @@ Navigation
 /*
 SUB LIST
 ----------------------------------------------------------------------------- */
-
-
 .sub-siteNav {
-    background-color: #2a2a2a;
-    padding: 0;
-    line-height: 4;
-
-    opacity: 0;
-    transition: all .6s ease;
-
     position: absolute;
     left: 0;
-
+    background-color: #2a2a2a;
     width: 14em;
+    line-height: 4;
+    padding: 0;
+    transition: all .6s ease;
 
     visibility: hidden;
+    opacity: 0;
 }
 
 .sub-siteNav li {
@@ -246,14 +208,13 @@ width: 180px;
 
 
 
-@media screen and (min-width: 993px) {
-    .siteNav li {
-        position: relative;
-    }
 
-    .sub-siteNav li {
-        position: relative;
-    }
+/*
+Navigation desktop screen
+------------------------------------------------------------------------------*/
+@media screen and (min-width: 993px) {
+    .siteNav li     { position: relative; }
+    .sub-siteNav li { position: relative; }
 
     /* Visible Sublist */
     .siteNav li:hover .sub-siteNav {
@@ -261,42 +222,17 @@ width: 180px;
         visibility: visible;
     }
 
-
-
     /* Visible SubSublist */
     .sub-siteNav li:hover .sub-sub-siteNav { opacity: 1; visibility: visible; }
-
-
-    .mobile-heading {
-        display: none;
-    }
+    .mobile-heading { display: none; }
 }
 
 
-
-
-
-
-
-
-
-
-
 /*
-Navigation smaller screen
-----------------------------------------------------------------------------  */
-
-
+Navigation mobile screen
+------------------------------------------------------------------------------*/
 @media screen and (max-width: 992px) {
-
-    /* Hamburger button */
-
-
-
-
-
     /* Multi-Level Push Menu */
-
     .nav-line {
         position: relative;
         height: 100%;
@@ -340,8 +276,6 @@ Navigation smaller screen
     /*
     Navigation
     --------------------------------------------------------------------------*/
-
-
     .siteNav {
         height: 100vh;
         display: none;
@@ -374,9 +308,6 @@ Navigation smaller screen
         color: #ccc;
     }
 
-
-
-
     .sitenav-link-1 > a span:after {
         content: "";
         display: block;
@@ -391,9 +322,6 @@ Navigation smaller screen
         border-left: 2px solid;
         transform: rotate(135deg);
     }
-
-
-
 
     .sitenav-link-4 > a span:after {
         content: "";
@@ -410,15 +338,10 @@ Navigation smaller screen
         transform: rotate(135deg);
     }
 
-
-
-
-
     .siteNav {
         opacity: 1;
         visibility: visible;
     }
-
 
 
     /*
@@ -426,15 +349,14 @@ Navigation smaller screen
     ----------------------------------------------------------------------------- */
     .sub-siteNav {
         width: 100%;
+        height: 100vh;
         visibility: hidden;
         opacity: 0;
+        display: none;
 
         top: 0;
         padding: 0;
         border-color: #333!important;
-        height: 100vh;
-
-        display: none;
 
         z-index: 1;
     }
@@ -446,9 +368,7 @@ Navigation smaller screen
         color: #ccc;
     }
 
-    .sub-siteNav li a {
-        color: #ccc;
-    }
+    .sub-siteNav li a { color: #ccc; }
 
     .mobile-heading {
         background-color: #1d1d1d;
@@ -457,14 +377,12 @@ Navigation smaller screen
 
     }
 
-
     .sub-siteNav li.mobile-heading span:before {
         content: "";
         display: block;
         position: absolute;
         left: 2em;
         top: 26px;
-
 
         width: 0.4em;
         height: 0.4em;
@@ -473,59 +391,18 @@ Navigation smaller screen
         transform: rotate(-45deg);
     }
 
-
-    .hide-site-nav {
-        visibility: hidden!important;
-    }
-
-
+    .hide-site-nav { visibility: hidden!important; }
     .show-site-nav-kids {
-
         opacity: 1!important;
         visibility: visible!important;
         display: block;
-
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .middle-header {
-    background: #000;
     min-height: 40em;
-
     position: relative;
-
+    background: #000;
     background-image: url('../img/agriculture-countryside-cropland-2131899.jpg');
     background-repeat: no-repeat;
     background-position: center;
@@ -534,71 +411,25 @@ Navigation smaller screen
 
 .mTitle {
     position: absolute;
-
-    top: 0;
+    top: 9em;
     left: 0;
     right: 0;
-
     z-index: 1;
-
-
-    /* background-color: #444; */
-    top: 9em;
 }
 
-
-
-
-#playBtn, #pauseBtn {
-    color: white;
-    font-size: 5em;
-    z-index: 999;
-    position: absolute;
-    bottom: 5%;
-
-}
-#playBtn {
-    left: 45%;
-    transform: translateX(-45%);
-}
-#pauseBtn {
-    left: 55%;
-    transform: translateX(-55%);
-}
-
-
-
-
-
-
-.galary-container {
-    min-height: 40em;
-}
-
-
-
-
-
-.middle-slideshow {
-    position: relative;
-}
-
+.gallery-container { min-height: 40em; }
+.middle-slideshow { position: relative; }
 .middle-contact {
     height: 24em;
     background-color: #222;
 }
-
-
 
 .site-footer {
     background: #2a2a2a;
     padding-bottom: 2em;
 }
 
-
-.copyright {
-    padding-left: 56px;
-}
+.copyright { padding-left: 56px; }
 .copyright-wrapper p {
     color: #ccc;
     font-size: 12px;
@@ -606,14 +437,11 @@ Navigation smaller screen
 }
 
 .footer-social-container {
-    padding: 1em;
-
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-
-
+    padding: 1em;
 }
 
 .backToTop {
@@ -634,8 +462,6 @@ Navigation smaller screen
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-
-
 }
 
 .hiremeBtn {
@@ -661,9 +487,7 @@ Navigation smaller screen
     flex-direction: row;
 }
 
-.social li {
-    padding: 0 .3em;
-}
+.social li { padding: 0 .3em; }
 
 .copyright {
     display: flex;
@@ -671,54 +495,34 @@ Navigation smaller screen
     flex-wrap: wrap;
 }
 
+
+
+
+
+
+/*
+Responsive Website Breakpoints
+------------------------------------------------------------------------------*/
 @media screen and (max-width: 992px) {
-    .middle-header {
-        min-height: 25em;
-    }
-
-    .galary-container {
-        min-height: 25em;
-    }
-
-    .topHireMe {
-        display: none;
-    }
-
-
-    .mTitle { top: 6em; }
-
-    h1 { font-size: 2.5em; }
-
-    h2 { font-size: 1.5em; }
+    .middle-header      { min-height: 25em; }
+    .gallery-container  { min-height: 25em;}
+    .topHireMe          { display: none; }
+    .mTitle             { top: 6em; }
+    h1                  { font-size: 2.5em; }
+    h2                  { font-size: 1.5em; }
 }
 
 @media screen and (max-width: 768px) {
     .mTitle { top: 7em; }
-    h1 { font-size: 1.5em; }
-    h2 { font-size: 1em; }
+    h1      { font-size: 1.5em; }
+    h2      { font-size: 1em; }
 }
 
 @media screen and (max-width: 480px) {
-
-    .imgLogo { font-size: 2em; }
-
-    #propLogo { font-size: 1em; }
-
-    ul {
-        padding: 0;
-    }
-
-    .hiremeBtn {
-        padding: 0;
-    }
-
-    .copyright {
-        padding: 1em;
-    }
-
-
-    .footer-links-container ul {
-        padding-right: 2em;
-    }
-
+    ul                          { padding: 0; }
+    .imgLogo                    { font-size: 2em; }
+    .propLogo                   { font-size: 1em; }
+    .hiremeBtn                  { padding: 0; }
+    .copyright                  { padding: 1em; }
+    .footer-links-container ul  { padding-right: 2em; }
 }

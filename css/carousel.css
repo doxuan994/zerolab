@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Slabo+27px&display=swap');
-
-
 .inner h4   { font-family: 'Slabo 27px', serif; }
 blockquote  { font-family: 'Slabo 27px', serif; }
 
@@ -24,19 +22,13 @@ blockquote  { font-family: 'Slabo 27px', serif; }
     font-weight: bold;
     font-size: 1.2em;
     transition: 0.6s ease;
-
     user-select: none;
 }
 
-.prev {
-    border-radius: 0 1em 1em 0;
-}
+.prev { border-radius: 0 1em 1em 0; }
 
 /* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 1em 0 0 1em;
-}
+.next { border-radius: 1em 0 0 1em; right: 0; }
 
 
 
@@ -56,17 +48,10 @@ blockquote  { font-family: 'Slabo 27px', serif; }
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
-    background-color: #717171;
-}
+.active, .dot:hover { background-color: #717171; }
 
 
-
-
-.mySlides { display: none; }
-
-.mySlides { position: relative; }
-
+.mySlides { display: none; position: relative; }
 .mySlides {
     min-height: 52em;
     background-size: cover;
@@ -89,43 +74,34 @@ blockquote  { font-family: 'Slabo 27px', serif; }
 
 
     position: absolute;
-
     top: 50%;
     transform: translateY(-50%);
-
     left: 15%;
 }
 
 
 
 @media screen and (max-width: 1200px) and (orientation: landscape) {
-    .mySlides {
-        min-height: 31em;
-    }
+    .mySlides { min-height: 31em; }
 }
 
 
 @media screen and (max-width: 992px) {
-    .mySlides {
-        min-height: 51em;
-    }
+    .mySlides { min-height: 51em; }
 }
 
 
 @media screen and (max-width: 768px) {
-    .mySlides {
-        min-height: 31em;
-    }
+    .mySlides { min-height: 31em; }
 
     .inner {
         top: 100%;
         transform: translateY(-100%);
-        padding-top: 1em;
-        padding-bottom: 0;
         left: 0;
         right: 0;
-
         max-width: 100%;
+        padding-top: 1em;
+        padding-bottom: 0;
     }
 
     .inner h4 {
