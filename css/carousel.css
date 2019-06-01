@@ -46,12 +46,17 @@ blockquote  { font-family: 'Slabo 27px', serif; }
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
 }
 .active, .dot:hover { background-color: #717171; }
 
 
 .mySlides { display: none; position: relative; }
+
+.mySlides {
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+}
+
 .mySlides {
     min-height: 52em;
     background-size: cover;

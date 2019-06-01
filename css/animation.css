@@ -1,0 +1,33 @@
+.oldSlideLeft {
+    animation-name: oldSlideLeft;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+}
+.newSlideLeft {
+    animation-name: newSlideLeft;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+}
+
+
+@keyframes oldSlideLeft {
+    0% {
+		transform: translateX(0);
+		opacity: 1
+	}
+	100% {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+}
+
+@keyframes newSlideLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

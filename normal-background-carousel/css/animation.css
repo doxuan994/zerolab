@@ -1,0 +1,48 @@
+.mySlideRight {
+    animation-name: mySlideRight;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+@keyframes mySlideRight {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+.mySlideLeft {
+    animation-name: mySlideLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes mySlideLeft {
+    0% {
+		transform: translateX(150%);
+		opacity: 0
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1
+	}
+}
+
+.myZoomer {
+    animation-name: myZoomer;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+}
+
+@keyframes myZoomer {
+    0% {
+		-webkit-transform: scale(.3)
+	}
+	100% {
+		-webkit-transform: scale(1)
+	}
+}
