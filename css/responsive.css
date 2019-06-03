@@ -1,6 +1,10 @@
 /* Correct Safari/iPhone ignores some font-size settings. */
 body { -webkit-text-size-adjust: none; }
 
+* {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -50,11 +54,17 @@ Custom classes for styling
     flex-direction: column;
     justify-content: center;
 }
+.justify-content { justify-content: center; }
 
+span.nobreak {
+    white-space: nowrap;
+}
 
 /*
 Flexbox CSS3 Layout & Grid
 ------------------------------------------------------------------------------*/
+
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -64,6 +74,9 @@ Flexbox CSS3 Layout & Grid
 .flex-item {}
 .column-half { flex-basis: 50%; }
 
+.column-3 {
+    flex-basis: 30%;
+}
 /*
 Gallery images
 ------------------------------------------------------------------------------*/
@@ -181,32 +194,57 @@ SUB LIST
 
 
 
-
 /*
-SUB SUB LIST
------------------------------------------------------------------------------ */
-/* .sub-sub-siteNav {
-background-color: #2a2a2a;;
-position: absolute;
-padding: 0;
-top: -1px;
-left: 120px;
-
-
-
-
-opacity: 0;
-visibility: hidden;
-transition: all .6s ease;
+                                SECTION
+------------------------------------------------------------------------------*/
+.middle-support {
+    position: relative;
+    text-align: center;
+    background: #0d0d09;
+    padding: 5em 0;
+    color: #fff;
 }
 
-.sub-sub-siteNav li {
-width: 180px;
-} */
+.middle-support h3 {
+    color: #fff;
+    border-color: #fff;
+}
 
+.middle-support h2 {
+    font-size: 3em;
+}
 
+.section-container {
+    margin: 0 auto;
+    padding: 4em 5em;
+    position: relative;
+}
 
+.content {
+    background: #333;
+    margin-top: 3em;
+    padding: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
 
+.content h4 {
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    margin-top: 3em;
+    margin-bottom: 1.5em;
+}
+
+.content i {
+    font-size: 6em;
+    color: #fff;
+}
+
+.innerChild p {
+    font-size: 0.9em;
+}
 
 
 /*
@@ -421,7 +459,8 @@ Navigation mobile screen
 .middle-slideshow { position: relative; }
 .middle-contact {
     height: 24em;
-    background-color: #222;
+    background-color: #fff;
+    color: #ccc;
 }
 
 .site-footer {
