@@ -72,11 +72,7 @@ Flexbox CSS3 Layout & Grid
 }
 
 .flex-item {}
-.column-half { flex-basis: 50%; }
 
-.column-3 {
-    flex-basis: 30%;
-}
 /*
 Gallery images
 ------------------------------------------------------------------------------*/
@@ -201,8 +197,14 @@ SUB LIST
     position: relative;
     text-align: center;
     background: #0d0d09;
-    padding: 5em 0;
-    color: #fff;
+
+    background-image: url('../img/automobile-car-daylight-2219433.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+
+    padding: 2em 0;
 }
 
 .middle-support h3 {
@@ -221,7 +223,7 @@ SUB LIST
 }
 
 .content {
-    background: #333;
+    background: whitesmoke;
     margin-top: 3em;
     padding: 2em;
     margin-left: 1em;
@@ -239,7 +241,7 @@ SUB LIST
 
 .content i {
     font-size: 6em;
-    color: #fff;
+    color: black;
 }
 
 .innerChild p {
@@ -270,6 +272,11 @@ Navigation desktop screen
 Navigation mobile screen
 ------------------------------------------------------------------------------*/
 @media screen and (max-width: 992px) {
+
+
+
+
+
     /* Multi-Level Push Menu */
     .nav-line {
         position: relative;
@@ -435,6 +442,9 @@ Navigation mobile screen
         visibility: visible!important;
         display: block;
     }
+
+
+
 }
 
 .middle-header {
@@ -542,7 +552,14 @@ Navigation mobile screen
 /*
 Responsive Website Breakpoints
 ------------------------------------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+    .middle-support h2 {
+        font-size: 2em;
+    }
+}
 @media screen and (max-width: 992px) {
+
+
     .middle-header      { min-height: 25em; }
     .gallery-container  { min-height: 25em;}
     .topHireMe          { display: none; }
@@ -552,6 +569,7 @@ Responsive Website Breakpoints
 }
 
 @media screen and (max-width: 768px) {
+
     .mTitle { top: 7em; }
     h1      { font-size: 1.5em; }
     h2      { font-size: 1em; }
@@ -564,4 +582,47 @@ Responsive Website Breakpoints
     .hiremeBtn                  { padding: 0; }
     .copyright                  { padding: 1em; }
     .footer-links-container ul  { padding-right: 2em; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+                Bootstrap Equal Breakpoints
+------------------------------------------------------------------------------*/
+/* lg (for laptops and desktops - screens equal to or greater than 1200px wide) */
+@media screen and (min-width: 1200px) {
+    .column-lg-5 { flex-basis: 50%; }
+    .column-lg-3 { flex-basis: 30%; }
+}
+/* md (for small laptops - screens equal to or greater than 992px wide) */
+@media screen and (min-width: 992px) {
+    .column-md-10 { flex-basis: 100%; }
+    .column-md-5 { flex-basis: 50%; }
+    .column-md-3 { flex-basis: 30%; }
+}
+/* sm (for tablets - screens equal to or greater than 768px wide) */
+@media screen and (min-width: 768px) {
+    .column-sm-10 { flex-basis: 100%; }
+    .column-sm-5 { flex-basis: 50%; }
+}
+/* xs (for phones - screens less than 768px wide) */
+@media screen and (max-width: 767px) {
+    .column-xs-10 { flex-basis: 100%; }
 }
