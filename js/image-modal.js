@@ -1,16 +1,31 @@
-let myModal = document.getElementById('myModal');
-let modalImg01 = document.getElementById('modalImg01');
 let myImg1 = document.getElementById('myImg1');
-
 myImg1.addEventListener('click', function() {
+    let myModal = document.getElementById('myModal');
     myModal.classList.add('displayBlockDesktop');
 
+    let modalImg01 = document.getElementById('modalImg01');
     modalImg01.src = this.src;
 });
+
 let modalCloseBtn = document.getElementById('modalCloseBtn');
 modalCloseBtn.addEventListener('click', function() {
-    myModal.classList.remove('displayBlockDesktop');
+    ani(function() {
+        let myModal = document.getElementById('myModal');
+        myModal.classList.remove('displayBlockDesktop');
+
+        console.log('Close window!');
+    });
 });
+
+function ani(callback) {
+    // Execute animation first.
+    let modalImg01 = document.getElementById('modalImg01');
+    modalImg01.classList.add('active');
+    console.log('Finished animation!');
+
+    // After finishing the animation close the modal.
+    callback();
+}
 
 
 
