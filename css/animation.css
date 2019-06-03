@@ -1,33 +1,17 @@
-.oldSlideLeft {
-    animation-name: oldSlideLeft;
+.zeroSlideLeft {
+    animation-name: zeroSlideLeft;
     animation-timing-function: ease;
-    animation-duration: 1s;
-}
-.newSlideLeft {
-    animation-name: newSlideLeft;
-    animation-timing-function: ease;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
 }
 
 
-@keyframes oldSlideLeft {
+@keyframes zeroSlideLeft {
     0% {
+		transform: translateX(150%);
+		opacity: 0
+	}
+	100% {
 		transform: translateX(0);
 		opacity: 1
 	}
-	100% {
-		transform: translateX(-100%);
-		opacity: 0;
-	}
-}
-
-@keyframes newSlideLeft {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }

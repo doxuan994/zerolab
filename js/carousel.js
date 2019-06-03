@@ -17,22 +17,10 @@ function showSlidesDot(n) {
 
     let dots = document.getElementsByClassName("dot");
 
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
 
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[slideIndex-1].classList.remove('slideRight');
-        slides[slideIndex-1].classList.remove('slideLeft');
-    }
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
+    for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
     slides[slideIndex-1].style.display = "block";
     slides[slideIndex-1].classList.add('zoomer');
 }
@@ -68,7 +56,7 @@ function showSlides(n, isPrevorNext) {
 
 
     } else if (isPrevorNext == 1) {
-
         // Click next
+
     }
 }
