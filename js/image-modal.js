@@ -19,8 +19,8 @@ modalCloseBtn.addEventListener('click', function() {
 
 function ani(callback) {
     // Execute animation first.
-    let modalImg01 = document.getElementById('modalImg01');
-    modalImg01.classList.add('active');
+    // let modalImg01 = document.getElementById('modalImg01');
+    // modalImg01.classList.add('active');
     console.log('Finished animation!');
 
     // After finishing the animation close the modal.
