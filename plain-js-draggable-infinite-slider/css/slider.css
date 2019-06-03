@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-* { box-sizing: border-box; }
 
 body {
     height: 100%;
@@ -22,10 +21,11 @@ body {
 }
 
 .wrapper {
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
-    width: 400px;
-    height: 300px;
+
+
+
     z-index: 1;
 }
 
@@ -33,53 +33,38 @@ body {
     display: flex;
     position: relative;
     top: 0;
-    left: -400px;
+    /* left: -400px; */
     width: 10000px;
 }
 
-.slides.shifting {
-    transition: left 1s ease-out;
-}
+.slides.shifting { transition: left 0.5s ease-out; }
 
 .slide {
     width: 400px;
     height: 300px;
     border-radius: 2px;
-    cursor: pointer;
+
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    cursor: pointer;
     transition: all 1s;
-    position: relative;
-
-    background: gold;
 }
 
 
 
 
-.slider.loaded .slide {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
+/* Styling for background images */
+.slider.loaded .slide                                                   { background-position: center; background-repeat: no-repeat; background-size: cover; }
+.slider.loaded .slide:nth-child(1),.slider.loaded .slide:nth-child(4)   { background-image: url("../img/ancient-architectural-design-architecture-2166553.jpg"); }
+.slider.loaded .slide:nth-child(2), .slider.loaded .slide:nth-child(5)  { background-image: url("../img/backlit-bali-fog-2166643.jpg"); }
+.slider.loaded .slide:nth-child(3)                                      { background-image: url("../img/clouds-daylight-environment-2082949.jpg"); }
 
 
-.slider.loaded .slide:nth-child(1),
-.slider.loaded .slide:nth-child(4) {
-    background-image: url("../img/ancient-architectural-design-architecture-2166553.jpg");
-}
-.slider.loaded .slide:nth-child(2),
-.slider.loaded .slide:nth-child(5) {
-    background-image: url("../img/backlit-bali-fog-2166643.jpg");
-}
-
-.slider.loaded .slide:nth-child(3) { background-image: url("../img/clouds-daylight-environment-2082949.jpg"); }
-
-
-
+/* Previous and next button styling */
 .control {
     position: absolute;
     top: 50%;
@@ -91,26 +76,7 @@ body {
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
     z-index: 2;
 }
-
-.prev,
-.next {
-    background-size: 22px;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-}
-
-.prev {
-    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
-    left: -20px;
-}
-
-.next {
-    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
-    right: -20px;
-}
-
-.prev:active,
-.next:active {
-    transform: scale(.8);
-}
+.prev, .next                { background-size: 22px; background-position: center; background-repeat: no-repeat; cursor: pointer; }
+.prev                       { background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png); left: 0px; }
+.next                       { background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png); right: 0px; }
+.prev:active, .next:active  { transform: scale(.8); }
