@@ -61,33 +61,14 @@ function showSlides(n, isPrevorNext) {
 
 
     for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('oldSlideLeft');
-        slides[i].classList.remove('newSlideLeft');
-        slides[i].classList.remove('oldSlideRight');
-        slides[i].classList.remove('newSlideRight');
         slides[i].classList.remove('zoomer');
     }
     if (isPrevorNext == -1) {
-        console.log("Click prev!");
+        // Click prev
 
 
     } else if (isPrevorNext == 1) {
-        console.log("Click next!");
 
-        // 2
-        // 3
-        // 1
-        if (slideIndex == 2) {
-            slides[slideIndex-2].classList.add('oldSlideLeft');
-            slides[slideIndex-1].classList.add('newSlideLeft');
-        } else if (slideIndex == 3) {
-            slides[slideIndex-2].classList.add('oldSlideLeft');
-            slides[slideIndex-1].classList.add('newSlideLeft');
-
-        } else if (slideIndex == 1) {
-            slides[slideIndex+1].classList.add('oldSlideLeft');
-            slides[slideIndex-1].classList.add('newSlideLeft');
-        }
-
+        // Click next
     }
 }
