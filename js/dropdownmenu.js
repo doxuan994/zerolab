@@ -1,6 +1,5 @@
 // Show/Hide sideNav on click Hamburger button.
 // Hamburger button transform on click.
-
 let navLine = document.getElementById('navLine');
 navLine.addEventListener('click', navLineTransform);
 function navLineTransform() {
@@ -16,32 +15,6 @@ function navLineTransform() {
     let siteNav = document.getElementById('siteNav');
     siteNav.classList.toggle('displayBlock');
 }
-
-
-// // Reset drop down menu when users open sub menu at the mobile but not close
-// // and they resize to bigger screen.
-// // a window.resize call back funtion.
-// function resetDropdownMenu() {
-//     let windowInnerWidth = window.innerWidth;
-//     if (windowInnerWidth > 992) {
-//
-//
-//
-//     }
-// }
-//
-//
-//
-// // Debouncing.
-// // Function will only be called once the resizing is “complete.”
-// let timeOut = false;
-// window.addEventListener('resize', function() {
-//     // Clear the time out.
-//     clearTimeout(timeOut);
-//
-//     // Start timing for event "completion".
-//     timeOut = setTimeout(resetDropdownMenu, 250);
-// });
 
 
 
