@@ -374,8 +374,6 @@ Responsive Website Breakpoints
 
 @media screen and (max-width: 480px) {
     ul                          { padding: 0; }
-    .imgLogo                    { font-size: 2em; }
-    .propLogo                   { font-size: 1em; }
     .hiremeBtn                  { padding: 0; }
     .copyright                  { padding: 1em; }
     .footer-links-container ul  { padding-right: 2em; }

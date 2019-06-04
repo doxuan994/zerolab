@@ -134,7 +134,6 @@ SUB LIST
 
 
 
-
 /* -----------------------------------------------------------------------------
                     Responsive Website Breakpoints
 ----------------------------------------------------------------------------- */
@@ -158,17 +157,8 @@ Navigation desktop screen
         visibility: visible;
     }
 
-
     .mobile-heading { display: none; }
 }
-
-
-
-
-
-
-
-
 
 
 /*
@@ -179,9 +169,6 @@ Navigation mobile screen
     Small components
     ------------------------------------------------------------------------------*/
     .topHireMe { display: none; }
-
-
-
 
     /*
     Hamburger Button
@@ -245,9 +232,7 @@ Navigation mobile screen
         visibility: hidden;
     }
 
-
     .displayBlock { display: block; }
-
 
     .siteNav li {
         border-bottom: 1px solid;
@@ -272,7 +257,6 @@ Navigation mobile screen
         right: 2em;
         top: 1.4em;
 
-
         width: 0.4em;
         height: 0.4em;
         border-top: 2px solid;
@@ -295,31 +279,22 @@ Navigation mobile screen
     }
 
 
-
-
-
-
     /*
     SUB LIST
     ----------------------------------------------------------------------------- */
     .sub-siteNav {
+        border-color: #333!important;
+        padding: 0;
         width: 100%;
         height: 100vh;
-
+        line-height: 1;
         display: block;
 
         opacity: 0;
         visibility: hidden;
 
-
-
         top: 0em;
         right: 0;
-        padding: 0;
-        border-color: #333!important;
-
-
-        line-height: 1;
     }
 
     .show-site-nav-kids {
@@ -358,4 +333,10 @@ Navigation mobile screen
         border-left: 2px solid;
         transform: rotate(-45deg);
     }
+}
+
+
+@media screen and (max-width: 767px) {
+    .logo     { font-size: 2em; }
+    .propLogo { font-size: 1em; }
 }
