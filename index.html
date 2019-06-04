@@ -9,31 +9,30 @@
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/wickedcss.css">
     <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/dropdownmenu.css">
     <link rel="stylesheet" href="css/overlay.css">
     <link rel="stylesheet" href="css/image-modal.css">
-    <link rel="stylesheet" href="css/navigation.css">
 </head>
 <body>
     <div class="site">
         <header id="top" class="site-header">
-            <nav id="nav" class="site-navigation">
-                <div class="leftSideNav">
-                    <div class="vertical-centered leftSideNav-item">
-                        <i class="fas fa-bus imgLogo"></i>
+            <nav id="nav" class="site-navigation flex-container justify-content-space-between">
+                <div class="leftSideNav flex-container">
+                    <div class="vertical-centered">
+                        <i class="fas fa-bus logo"></i>
                     </div>
-
-                    <div class="vertical-centered leftSideNav-item">
+                    <div class="vertical-centered">
                         <a class="propLogo">To Travel is to Live</a>
                     </div>
                 </div>
-                <div id="menu" class="sitenav-wrap" >
+                <div id="menu" class="sitenav-container flex-container">
                     <div id="navLine" class="nav-line">
                         <span id="lines" class="lines"></span>
                     </div>
-                    <ul id="siteNav" class="siteNav ">
+                    <ul id="siteNav" class="siteNav flex-container zeroSlideLeft">
                         <li id="sitenav-link-1" class="sub-link-item sitenav-link-1 hasChild"><a><span>Technology</span></a>
-                            <ul class="sub-siteNav ">
-                                <li class="mobile-heading"><a><span>Technology</span></a></li>
+                            <ul id="sub-siteNav-1" class="sub-siteNav">
+                                <li id="mobileHeading01" class="mobile-heading"><a><span>Technology</span></a></li>
                                 <li><a>SVG</a></li>
                                 <li><a>CSS</a></li>
                                 <li><a>CSS3</a></li>
@@ -46,8 +45,8 @@
                         <li id="sitenav-link-2"><a>About</a></li>
                         <li id="sitenav-link-3"><a>Blog</a></li>
                         <li id="sitenav-link-4" class="sub-link-item sitenav-link-4 hasChild"><a><span>Front End</span></a>
-                            <ul class="sub-siteNav ">
-                                <li class="mobile-heading"><a><span>Front End</span></a></li>
+                            <ul id="sub-siteNav-2" class="sub-siteNav">
+                                <li id="mobileHeading02" class="mobile-heading"><a><span>Front End</span></a></li>
                                 <li><a>Vue.js</a></li>
                                 <li><a>React.js</a></li>
                                 <li><a>Angular.js</a></li>
@@ -56,9 +55,9 @@
                         <li id="sitenav-link-5"><a>Back End</a></li>
                         <li id="sitenav-link-6"><a>Contact</a></li>
                     </ul>
-                </div>
-                <div class="hiremeBtn topHireMe">
-                    <a class="hireme" onclick="openNav()">Hire Me</a>
+                    <div class="hiremeBtn topHireMe">
+                        <a class="hireme" onclick="openNav()">Hire Me</a>
+                    </div>
                 </div>
             </nav>
         </header>

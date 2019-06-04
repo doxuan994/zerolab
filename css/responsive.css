@@ -84,124 +84,6 @@ Gallery images
 
 
 
-/*
-Small components
-------------------------------------------------------------------------------*/
-.hiremeBtn {
-    padding: 0 0 0 40px;
-    display: flex;
-    cursor: pointer;
-}
-
-.hireme {
-    background-color: #FEDC2A;
-    color: white;
-    font-weight: 800;
-    padding: 0.5em 1em;
-
-    margin-top: auto;
-    margin-bottom: auto;
-    position: relative;
-}
-
-
-
-/*
-                        HEADER & NAVIGATION
-------------------------------------------------------------------------------*/
-.site-header {
-    background-color: #2a2a2a;
-    height: 3.7em;
-
-}
-
-.site-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-/*
-Left side of the header
-------------------------------------------------------------------------------*/
-.leftSideNav {
-    height: 3.7em;
-
-    display: flex;
-    flex-direction: row;
-}
-.leftSideNav-item { height: 3.7em; }
-.imgLogo {
-    font-size: 2.6em;
-    padding-left: 0.5em;
-    color: white;
-}
-.propLogo {
-    color: #fff;
-    font-weight: 600;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    padding-left: 1em;
-}
-
-
-/*
-Navigation
-----------------------------------------------------------------------------  */
-.sitenav-wrap {
-    color: #ccc;
-    background-color: #2a2a2a;
-    height: 3.7em;
-    line-height: 3.7em;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-}
-
-.siteNav {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    z-index: 99;
-}
-
-.siteNav li {
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 0 1em;
-    cursor: pointer;
-    color: #e7e7e7;
-}
-.siteNav li:hover > a {
-    color: white;
-    transition: all 0.6s ease-in-out;
-    cursor: pointer;
-}
-
-
-
-/*
-SUB LIST
------------------------------------------------------------------------------ */
-.sub-siteNav {
-    position: absolute;
-    left: 0;
-    background-color: #2a2a2a;
-    width: 14em;
-    line-height: 4;
-    padding: 0;
-    transition: all .6s ease;
-
-    visibility: hidden;
-    opacity: 0;
-}
-
-.sub-siteNav li {
-    font-weight: 600;
-}
-
 
 
 
@@ -262,9 +144,6 @@ SUB LIST
 .innerChild p {
     font-size: 0.9em;
 }
-
-
-
 
 .middle-header {
     min-height: 40em;
@@ -333,8 +212,6 @@ SUB LIST
 }
 
 
-
-
 .social li { padding: 0 .3em; }
 
 .copyright {
@@ -352,7 +229,6 @@ Responsive Website Breakpoints
     .middle-support h2 {
         font-size: 2em;
     }
-    .topHireMe          { display: none; }
 }
 @media screen and (max-width: 991px) {
     .middle-header      { min-height: 25em; }
@@ -374,7 +250,6 @@ Responsive Website Breakpoints
 
 @media screen and (max-width: 480px) {
     ul                          { padding: 0; }
-    .hiremeBtn                  { padding: 0; }
     .copyright                  { padding: 1em; }
     .footer-links-container ul  { padding-right: 2em; }
 }
@@ -392,13 +267,13 @@ Responsive Website Breakpoints
 /* md (for small laptops - screens equal to or greater than 992px wide) */
 @media screen and (min-width: 992px) {
     .column-md-10 { flex-basis: 100%; }
-    .column-md-5 { flex-basis: 50%; }
-    .column-md-3 { flex-basis: 30%; }
+    .column-md-5  { flex-basis: 50%; }
+    .column-md-3  { flex-basis: 30%; }
 }
 /* sm (for tablets - screens equal to or greater than 768px wide) */
 @media screen and (min-width: 768px) {
     .column-sm-10 { flex-basis: 100%; }
-    .column-sm-5 { flex-basis: 50%; }
+    .column-sm-5  { flex-basis: 50%; }
 }
 /* xs (for phones - screens less than 768px wide) */
 @media screen and (max-width: 767px) {
