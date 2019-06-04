@@ -20,11 +20,10 @@ Navigation desktop screen
 /*
 Navigation mobile screen
 ------------------------------------------------------------------------------*/
-@media screen and (max-width: 1119px) {
+@media screen and (max-width: 1199px) {
     .sitenav-wrap {
         line-height: 1;
     }
-
 
 
     /* Multi-Level Push Menu */
@@ -81,6 +80,8 @@ Navigation mobile screen
         right: 0;
     }
 
+
+
     .displayBlock { display: block; }
 
     .stop-scrolling {
@@ -112,7 +113,7 @@ Navigation mobile screen
         display: block;
         position: absolute;
         right: 2em;
-        top: 4.6em;
+        top: 1.4em;
 
 
         width: 0.4em;
@@ -127,7 +128,7 @@ Navigation mobile screen
         display: block;
         position: absolute;
         right: 2em;
-        top: 14.4em;
+        top: 11.1em;
 
         width: 0.4em;
         height: 0.4em;
@@ -136,9 +137,11 @@ Navigation mobile screen
         transform: rotate(135deg);
     }
 
-    .siteNav {
-        opacity: 1;
-        visibility: visible;
+
+
+    .hide-site-nav {
+        opacity: 0!important;
+        visibility: hidden!important;
     }
 
 
@@ -148,15 +151,17 @@ Navigation mobile screen
     .sub-siteNav {
         width: 100%;
         height: 100vh;
+        display: block;
         visibility: hidden;
         opacity: 0;
-        display: none;
+
 
         top: 0;
         padding: 0;
         border-color: #333!important;
 
-        z-index: 1;
+
+        z-index: 999;
         line-height: 1;
     }
 
@@ -194,14 +199,11 @@ Navigation mobile screen
         transform: rotate(-45deg);
     }
 
-    .hide-site-nav {
-        opacity: 0!important;
-        visibility: hidden!important;
-        display: none;
-    }
+
     .show-site-nav-kids {
         visibility: visible!important;
-        display: block;
+        display: block!important;
+        z-index: 999;
     }
 
 }

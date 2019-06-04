@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+    <title>Navigation with drop down menu</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dropdownmenu.css">
+</head>
+<body>
+    <header id="top" class="site-header">
+        <nav id="nav" class="site-navigation flex-container justify-content-space-between">
+            <div class="leftSideNav flex-container">
+                <div class="vertical-centered">
+                    <i class="fas fa-bus logo"></i>
+                </div>
+                <div class="vertical-centered leftSideNav-item">
+                    <a class="propLogo">To Travel is to Live</a>
+                </div>
+            </div>
+            <div id="menu" class="sitenav-container flex-container">
+                <div id="navLine" class="nav-line">
+                    <span id="lines" class="lines"></span>
+                </div>
+                <ul id="siteNav" class="siteNav flex-container">
+                    <li id="sitenav-link-1" class="sub-link-item sitenav-link-1 hasChild"><a><span>Technology</span></a>
+                        <ul class="sub-siteNav ">
+                            <li class="mobile-heading"><a><span>Technology</span></a></li>
+                            <li><a>SVG</a></li>
+                            <li><a>CSS</a></li>
+                            <li><a>CSS3</a></li>
+                            <li><a>Animations</a></li>
+                            <li><a>JavaScript</a></li>
+                            <li><a>Vue.js</a></li>
+                            <li><a>Node.js</a></li>
+                        </ul>
+                    </li>
+                    <li id="sitenav-link-2"><a>About</a></li>
+                    <li id="sitenav-link-3"><a>Blog</a></li>
+                    <li id="sitenav-link-4" class="sub-link-item sitenav-link-4 hasChild"><a><span>Front End</span></a>
+                        <ul class="sub-siteNav ">
+                            <li class="mobile-heading"><a><span>Front End</span></a></li>
+                            <li><a>Vue.js</a></li>
+                            <li><a>React.js</a></li>
+                            <li><a>Angular.js</a></li>
+                        </ul>
+                    </li>
+                    <li id="sitenav-link-5"><a>Back End</a></li>
+                    <li id="sitenav-link-6"><a>Contact</a></li>
+                </ul>
+                <div class="hiremeBtn topHireMe">
+                    <a class="hireme" onclick="openNav()">Hire Me</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script src="js/dropdownmenu.js"></script>
+</body>
+</html>
