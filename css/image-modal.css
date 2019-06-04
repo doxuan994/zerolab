@@ -1,3 +1,16 @@
+/*
+Gallery images
+------------------------------------------------------------------------------*/
+.gallery-container { justify-content: center; }
+
+.imgBox {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
 .modal {
     display: none;
     position: fixed;

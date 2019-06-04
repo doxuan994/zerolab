@@ -30,6 +30,7 @@ function showSubList(evt) {
     let targetSiteNavLiChildNodes = targetSiteNavLi.childNodes;
     let targetSubSiteNav;
 
+
     // has subSiteNav
     if (targetSiteNavLiChildNodes.length > 1) {
         for (let i = 0; i < targetSiteNavLiChildNodes.length; i++) {
@@ -45,6 +46,7 @@ function showSubList(evt) {
         siteNav.classList.add('hide-site-nav');
         targetSubSiteNav.classList.add('show-site-nav-kids');
     }
+
 }
 
 
@@ -56,9 +58,38 @@ for (let i = 0; i < mobileHeading.length; i++) {
 }
 
 function hideSubList(evt) {
+    let top = document.getElementById('top');
     let siteNav = document.getElementById('siteNav');
     let subSiteNav = evt.srcElement.parentElement;
     let targetSiteNavLi = subSiteNav.parentElement;
+
     siteNav.classList.remove('hide-site-nav');
     subSiteNav.classList.remove('show-site-nav-kids');
 }
+
+
+// let mobileHeading01 = document.getElementById('mobileHeading01');
+// let mobileHeading02 = document.getElementById('mobileHeading02');
+//
+// mobileHeading01.addEventListener('click', function() {
+//     let siteNav = document.getElementById('siteNav');
+//     siteNav.classList.remove('hide-site-nav');
+//
+//     let subsiteNav1 = document.getElementById('sub-siteNav-1');
+//     subsiteNav1.classList.remove('show-site-nav-kids');
+// });
+//
+// mobileHeading02.addEventListener('click', function() {
+//     let siteNav = document.getElementById('siteNav');
+//     siteNav.classList.remove('hide-site-nav');
+//
+//     let subsiteNav2 = document.getElementById('sub-siteNav-2');
+//     subsiteNav2.classList.remove('show-site-nav-kids');
+// });
+
+
+
+let siteNav = document.getElementById('siteNav');
+siteNav.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+}, false);

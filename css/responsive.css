@@ -70,17 +70,7 @@ Flexbox CSS3 Layout & Grid
 }
 
 
-/*
-Gallery images
-------------------------------------------------------------------------------*/
-.gallery-container { justify-content: center; }
 
-.imgBox {
-    width: 100%;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.imgBox:hover { opacity: 0.3; }
 
 
 
@@ -89,6 +79,57 @@ Gallery images
 
 /*
                                 SECTION
+------------------------------------------------------------------------------*/
+.section-container {
+    margin: 0 auto;
+    padding: 4em 5em;
+    position: relative;
+}
+
+
+
+
+/*
+Section Middle Header
+------------------------------------------------------------------------------*/
+.middle-header {
+    min-height: 40em;
+    position: relative;
+    background: #000;
+    background-image: url('../img/architecture-3121009.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.middle-header-title {
+    position: absolute;
+    top: 9em;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+/*
+Section Middle slideshow
+------------------------------------------------------------------------------*/
+.middle-slideshow { position: relative; }
+
+
+
+
+/*
+Section Middle Content
+------------------------------------------------------------------------------*/
+.gallery-container { min-height: 40em; }
+
+
+
+
+/*
+Section Middle Support
 ------------------------------------------------------------------------------*/
 .middle-support {
     position: relative;
@@ -100,24 +141,14 @@ Gallery images
     background-position: center;
     background-size: cover;
 
-
     padding: 2em 0;
 }
 
-.middle-support h3 {
-    color: #fff;
-    border-color: #fff;
-}
+.middle-support h2 { font-size: 3em; }
+.middle-support h3 { color: #fff; border-color: #fff; }
 
-.middle-support h2 {
-    font-size: 3em;
-}
 
-.section-container {
-    margin: 0 auto;
-    padding: 4em 5em;
-    position: relative;
-}
+
 
 .content {
     background: whitesmoke;
@@ -145,82 +176,16 @@ Gallery images
     font-size: 0.9em;
 }
 
-.middle-header {
-    min-height: 40em;
-    position: relative;
-    background: #000;
-    background-image: url('../img/agriculture-countryside-cropland-2131899.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
-.mTitle {
-    position: absolute;
-    top: 9em;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
 
-.gallery-container { min-height: 40em; }
-.middle-slideshow { position: relative; }
+/*
+Section Middle Contact
+------------------------------------------------------------------------------*/
 .middle-contact {
     height: 24em;
     background-color: #fff;
     color: #ccc;
 }
-
-.site-footer {
-    background: #2a2a2a;
-    padding-bottom: 2em;
-}
-
-.copyright { padding-left: 56px; }
-.copyright-wrapper p {
-    color: #ccc;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.footer-social-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1em;
-}
-
-.backToTop {
-    padding: 0 1em;
-    margin-top: auto;
-    margin-bottom: auto;
-    position: relative;
-}
-
-.footer-links-container {
-    padding: 0 1em;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.footer-links-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-
-.social li { padding: 0 .3em; }
-
-.copyright {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-
 
 /*
 Responsive Website Breakpoints
