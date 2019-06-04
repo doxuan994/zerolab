@@ -127,9 +127,7 @@ SUB LIST
     padding: 0;
 
     position: absolute;
-    left: 0;
 
-    transition: all .6s ease;
 }
 
 
@@ -143,11 +141,19 @@ Navigation desktop screen
 ------------------------------------------------------------------------------*/
 @media screen and (min-width: 1200px) {
     .siteNav li     { position: relative; }
-    .sub-siteNav li { position: relative; }
 
+
+    /*
+    SUB LIST
+    ----------------------------------------------------------------------------- */
     .sub-siteNav {
         opacity: 0;
         visibility: hidden;
+        transition: all .6s ease;
+    }
+
+    .sub-siteNav li {
+        position: relative;
     }
 
 
@@ -281,7 +287,7 @@ Navigation mobile screen
 
     /*
     SUB LIST
-    ----------------------------------------------------------------------------- */
+    ------------------------------------------------------------------------- */
     .sub-siteNav {
         border-color: #333!important;
         padding: 0;
@@ -290,17 +296,26 @@ Navigation mobile screen
         line-height: 1;
         display: block;
 
-        opacity: 0;
         visibility: hidden;
 
-        top: 0em;
+        top: 0;
         right: 0;
     }
 
     .show-site-nav-kids {
-        opacity: 1;
         visibility: visible!important;
+
+        animation-name: zeroSlideLeft;
+        animation-timing-function: ease;
+        animation-duration: 0.2s;
     }
+
+
+
+
+
+
+
 
     .sub-siteNav li {
         padding: 0;
@@ -313,11 +328,16 @@ Navigation mobile screen
 
     .sub-siteNav li a { color: #ccc; }
 
+
+
+    /*
+    SUB LIST Heading
+    ----------------------------------------------------------------------------- */
     .mobile-heading {
         background-color: #1d1d1d;
         padding-left: 9em!important;
     }
-    .mobile-heading span        { color: #8e8e8e; }
+    .mobile-heading span         { color: #8e8e8e; }
     .mobile-heading a:hover span { color: #8e8e8e; }
 
     .sub-siteNav li.mobile-heading span:before {
