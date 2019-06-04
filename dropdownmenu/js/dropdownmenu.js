@@ -45,20 +45,41 @@ function showSubList(evt) {
         siteNav.classList.add('hide-site-nav');
         targetSubSiteNav.classList.add('show-site-nav-kids');
     }
+
 }
 
 
 
 // Hide sub menu.
-let mobileHeading = document.querySelectorAll('.mobile-heading');
-for (let i = 0; i < mobileHeading.length; i++) {
-    mobileHeading[i].addEventListener('click', hideSubList);
-}
+// let mobileHeading = document.querySelectorAll('.mobile-heading');
+// for (let i = 0; i < mobileHeading.length; i++) {
+//     mobileHeading[i].addEventListener('click', hideSubList);
+// }
+//
+// function hideSubList(evt) {
+//     let siteNav = document.getElementById('siteNav');
+//     let subSiteNav = evt.srcElement.parentElement;
+//     let targetSiteNavLi = subSiteNav.parentElement;
+//     siteNav.classList.remove('hide-site-nav');
+//     subSiteNav.classList.remove('show-site-nav-kids');
+// }
 
-function hideSubList(evt) {
+
+let mobileHeading01 = document.getElementById('mobileHeading01');
+let mobileHeading02 = document.getElementById('mobileHeading02');
+
+mobileHeading01.addEventListener('click', function() {
     let siteNav = document.getElementById('siteNav');
-    let subSiteNav = evt.srcElement.parentElement;
-    let targetSiteNavLi = subSiteNav.parentElement;
     siteNav.classList.remove('hide-site-nav');
-    subSiteNav.classList.remove('show-site-nav-kids');
-}
+
+    let subsiteNav1 = document.getElementById('sub-siteNav-1');
+    subsiteNav1.classList.remove('show-site-nav-kids');
+});
+
+mobileHeading02.addEventListener('click', function() {
+    let siteNav = document.getElementById('siteNav');
+    siteNav.classList.remove('hide-site-nav');
+
+    let subsiteNav2 = document.getElementById('sub-siteNav-2');
+    subsiteNav2.classList.remove('show-site-nav-kids');
+});

@@ -296,6 +296,7 @@ Navigation mobile screen
         line-height: 1;
         display: block;
 
+        opacity: 0;
         visibility: hidden;
 
         top: 0;
@@ -305,17 +306,11 @@ Navigation mobile screen
     .show-site-nav-kids {
         visibility: visible!important;
 
+        opacity: 1;
         animation-name: zeroSlideLeft;
         animation-timing-function: ease;
         animation-duration: 0.2s;
     }
-
-
-
-
-
-
-
 
     .sub-siteNav li {
         padding: 0;
@@ -337,6 +332,8 @@ Navigation mobile screen
         background-color: #1d1d1d;
         padding-left: 9em!important;
     }
+
+
     .mobile-heading span         { color: #8e8e8e; }
     .mobile-heading a:hover span { color: #8e8e8e; }
 
