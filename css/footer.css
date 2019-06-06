@@ -38,7 +38,9 @@
     flex-direction: row;
 }
 
-
+.hiremeFooter {
+    margin-left: 40px;
+}
 .social li { padding: 0 .3em; }
 
 .copyright {
@@ -48,6 +50,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .hiremeFooter {
+        margin-left: 0px;
+    }
     .copyright                  { padding: 1em; }
     .footer-links-container ul  { padding-right: 2em; }
 }
