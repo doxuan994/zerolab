@@ -38,6 +38,10 @@
     flex-direction: row;
 }
 
+.footer-links-wrapper li {
+    line-height: 1.5em;
+}
+
 .hiremeFooter {
     margin-left: 40px;
 }
@@ -50,9 +54,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .hiremeFooter {
-        margin-left: 0px;
-    }
+    .hiremeFooter               { margin-left: 0px; }
     .copyright                  { padding: 1em; }
     .footer-links-container ul  { padding-right: 2em; }
 }
