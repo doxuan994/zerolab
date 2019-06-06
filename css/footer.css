@@ -46,3 +46,8 @@
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 480px) {
+    .copyright                  { padding: 1em; }
+    .footer-links-container ul  { padding-right: 2em; }
+}

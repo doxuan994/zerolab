@@ -70,7 +70,24 @@ Flexbox CSS3 Layout & Grid
 }
 
 
+/*
+Small components
+------------------------------------------------------------------------------*/
+.hiremeBtn {
+    padding: 0;
+    cursor: pointer;
+}
 
+.hireme {
+    background-color: #FEDC2A;
+    color: white;
+    font-weight: 800;
+    padding: 0.5em 1em;
+
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+}
 
 
 
@@ -214,9 +231,7 @@ Responsive Website Breakpoints
 }
 
 @media screen and (max-width: 480px) {
-    ul                          { padding: 0; }
-    .copyright                  { padding: 1em; }
-    .footer-links-container ul  { padding-right: 2em; }
+    ul { padding: 0; }
 }
 
 
